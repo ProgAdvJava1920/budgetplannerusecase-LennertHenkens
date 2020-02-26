@@ -18,7 +18,10 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class BudgetPlanner {
+    private static final Logger LOGGER = LogManager.getLogger(BudgetPlanner.class);
+
     public static void main(String[] args) {
+        LOGGER.info("start reading");
         new BudgetPlannerImporter().importCsv(Paths.get("src/main/resources/account_payments.csv"));
     }
 }
